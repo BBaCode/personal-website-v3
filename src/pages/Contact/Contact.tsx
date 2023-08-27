@@ -1,11 +1,5 @@
-import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import {
-  FaEnvelope,
-  FaEnvelopeOpen,
-  FaGithub,
-  FaLinkedin,
-} from "react-icons/fa";
+import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 import "./Contact.scss";
 
 function ContactPage() {
@@ -28,6 +22,7 @@ function ContactPage() {
           <Col className="text-center col-auto">
             <div
               onClick={(e) => {
+                e.preventDefault();
                 window.location.href = "mailto:brianbsstt@gmail.com";
               }}
             >

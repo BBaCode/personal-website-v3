@@ -5,7 +5,6 @@ import App from "./App.tsx";
 import About from "./pages/About/About.tsx";
 import ErrorPage from "./pages/ErrorPage.tsx";
 import HomePage from "./pages/HomePage/HomePage.tsx";
-import Blog from "./pages/Blog/Blog.tsx";
 import ContactPage from "./pages/Contact/Contact.tsx";
 
 const router = createBrowserRouter([
