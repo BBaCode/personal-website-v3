@@ -1,0 +1,10 @@
+* {
+  font-family: "Chivo", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
+  --bs-bg-opacity: 1;
+}

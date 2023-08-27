@@ -1,0 +1,47 @@
+.title1 {
+  transform: translateX(-200%);
+  animation: slideInFromLeft 1s ease-in-out forwards;
+  opacity: 0;
+}
+
+.title2 {
+  transform: translateX(-200%);
+  animation: slideInFromLeft 1s 1s ease-in-out forwards;
+  opacity: 0;
+}
+
+.title3 {
+  transform: translateX(-200%);
+  animation: slideInFromLeft 1s 2s ease-in-out forwards;
+  opacity: 0;
+}
+
+.bodyText {
+  transform: translateX(-200%);
+  animation: slideInFromLeft 1s 3s ease-in-out forwards;
+  opacity: 0;
+}
+
+.dk {
+  animation: fadeIn 2s 4s linear forwards;
+  opacity: 0%;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 100%;
+  }
+}

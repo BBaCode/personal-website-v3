@@ -1,0 +1,24 @@
+.col-auto {
+  :hover {
+    cursor: pointer;
+  }
+  font-size: 2rem;
+}
+
+.linkedin {
+  color: black;
+}
+
+.github {
+  color: black;
+  border-radius: 50%;
+}
+
+.col-auto:hover .linkedin {
+  color: #0a66c2;
+  background-color: white;
+}
+.col-auto:hover .github {
+  color: #9614d0;
+  background-color: black;
+}

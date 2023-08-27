@@ -1,0 +1,55 @@
+.nav-link {
+  text-align: center;
+}
+
+.text-decoration-none {
+  width: 100px;
+  &:hover {
+    border-bottom: 1px solid black;
+  }
+}
+
+.navbar-nav {
+  @media (max-width: 991px) {
+    padding-top: 5rem;
+  }
+}
+
+.navbar {
+  border: none;
+  box-shadow: none;
+}
+
+.navbar-toggler {
+  border: none;
+  outline: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-toggler-icon {
+  background-color: transparent;
+}
+
+@media (max-width: 991px) {
+  .navbar-collapse {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f8f9fa;
+    transform: translate(100%, -100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .navbar-collapse.show {
+    transform: translate(0, 0);
+  }
+
+  .navbar-toggler {
+    z-index: 1000;
+  }
+}
