@@ -17,19 +17,8 @@ function About() {
             <p className="text-center">
               I'm a finance graduate from Business school who followed an
               unconventional path to find my true passion. Originally drawn to
-              the bustling streets of New York, I embarked on a journey in
-              sales, seeking new experiences in an unfamiliar city.
-            </p>
-          </Col>
-        </Row>
-        <Row className="d-flex justify-content-center rowTwo">
-          <Col className="col-md-8 col-lg-6">
-            <p className="text-center">
-              As time went on, I discovered my craving for something more
-              dynamic and impactful. Transitioning into the world of technology
-              felt like a natural progression, allowing me to collaborate with
-              like-minded individuals and participate in the creation of
-              tangible solutions.
+              the bustling streets of New York, I embarked on my journey seeking
+              new experiences in an unfamiliar city.
             </p>
           </Col>
         </Row>
