@@ -1,7 +1,7 @@
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import meAndTucker from "../../assets/tucker.jpg";
+import dk from "../../assets/dk.png";
 import "./HomePage.scss";
 
 function HomePage() {
@@ -27,8 +27,7 @@ function HomePage() {
           </p>
         </Col>
         <Col className="col-md-7 col-xl-8 rectangle-container">
-          <img className="w-100 dk" src={meAndTucker} alt="meAndTucker" />
-          <p>Picture of myself and my girlfriend's family dog: Tucker</p>
+          <img className="w-100 dk" src={dk} alt="meAndTucker" />
         </Col>
       </Row>
     </Container>
