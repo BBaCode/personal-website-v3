@@ -1,4 +1,4 @@
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 import "./Contact.scss";
 
@@ -20,23 +20,30 @@ function ContactPage() {
         </Row>
         <Row className="justify-content-center">
           <Col className="text-center col-auto">
-            <div
+            <Button
+              variant="secondary"
+              size="lg"
               onClick={(e) => {
                 e.preventDefault();
                 window.location.href = "mailto:brianbsstt@gmail.com";
               }}
             >
-              <FaEnvelope />
-            </div>
+              Mail
+            </Button>
           </Col>
+
           <Col className="text-center col-auto">
             <a href="https://www.linkedin.com/in/brian-d-bassett/">
-              <FaLinkedin className="linkedin" />
+              <Button size="lg" variant="primary">
+                LinkedIn
+              </Button>
             </a>
           </Col>
           <Col className="text-center col-auto">
             <a href="https://github.com/BBaCode">
-              <FaGithub className="github" />
+              <Button size="lg" variant="dark">
+                Github
+              </Button>
             </a>
           </Col>
         </Row>
