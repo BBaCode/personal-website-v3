@@ -1,5 +1,4 @@
 import { Container, Row, Col, Button } from "react-bootstrap";
-import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 import "./Contact.scss";
 
 function ContactPage() {
