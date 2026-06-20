@@ -23,7 +23,11 @@ function Header() {
       >
         <Container className="nav-container">
           <Navbar.Brand>
-            <Link className="brand-link" to="/" onClick={() => setExpanded(false)}>
+            <Link
+              className="brand-link"
+              to="/"
+              onClick={() => setExpanded(false)}
+            >
               BRIAN BASSETT
             </Link>
           </Navbar.Brand>
@@ -58,7 +62,7 @@ function Header() {
               </Nav.Link>
               <Nav.Link as="span" className="availability">
                 <span className="availability-dot" aria-hidden="true" />
-                Building experiences
+                Building
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
