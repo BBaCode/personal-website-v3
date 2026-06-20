@@ -1,36 +1,80 @@
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 import dk from "../../assets/dk.png";
 import "./HomePage.scss";
+import {
+  FaArrowRight,
+  FaGithub,
+  FaLinkedinIn,
+  FaRegCompass,
+} from "react-icons/fa";
+
+const profileLinks = [
+  {
+    href: "https://github.com/BBaCode",
+    label: "GitHub",
+    icon: <FaGithub aria-hidden="true" />,
+  },
+  {
+    href: "https://www.linkedin.com/in/brian-d-bassett/",
+    label: "LinkedIn",
+    icon: <FaLinkedinIn aria-hidden="true" />,
+  },
+];
+
+const focusAreas = ["Interactive systems", "Blockchain", "Game design"];
 
 function HomePage() {
   return (
-    <Container>
-      <Row className="row-cols-1 row-cols-md-2 pt-5 mt-5">
-        <Col className="col-md-5 col-xl-4">
-          <h1 className="mb-0 text-center text-md-start title1">DEVELOPER.</h1>
-          <h1 className="mb-0 text-center text-md-start title2">LEARNER.</h1>
-          <h1 className="pb-3 text-center text-md-start title3">
-            VOLLEYBALLER.
-          </h1>
-          <p className="pb-3 text-center text-md-start bodyText">
-            Born in 1997 just outside of Boston, Massachusetts. I've always been
-            interested in math and patterns which lead to a strong affinity for
-            software at an early age. After spending some early career time on
-            the finance and business side, I quickly realized my passion lies in
-            how things are created as opposed to selling them. Beyond the world
-            of code, I find joy in a variety of interests - from reading Sci-Fi
-            to beach and indoor volleyball. I also enjoy playing Blues and Folk
-            guitar (badly) and gaming once in a while. Thanks for checking me
-            out and joining me on this journey of exploration and innovation!
+    <main className="home-page">
+      <section className="hero-shell" aria-labelledby="hero-title">
+        <div className="hero-copy">
+          <h1 id="hero-title">Brian Bassett creates digital experiences.</h1>
+          <p className="hero-description">
+            I am drawn to building things that create meaningful experiences and
+            real value for people. Right now my interests are centered on
+            blockchain technology, game design, and the creative space where
+            software becomes something people want to spend time with.
           </p>
-        </Col>
-        <Col className="col-md-7 col-xl-8 rectangle-container">
-          <img className="w-100 dk" src={dk} alt="meAndTucker" />
-        </Col>
-      </Row>
-    </Container>
+
+          <div className="hero-actions" aria-label="Profile links">
+            {profileLinks.map((link) => (
+              <a
+                className="profile-link"
+                href={link.href}
+                key={link.href}
+                rel="noreferrer"
+                target="_blank"
+              >
+                {link.icon}
+                <span>{link.label}</span>
+                <FaArrowRight className="arrow-icon" aria-hidden="true" />
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div className="portrait-panel" aria-label="Portrait">
+          <img src={dk} alt="Brian Bassett" />
+          <div className="portrait-meta">
+            <span>Exploring</span>
+            <strong>Play, ownership, and creative tools</strong>
+          </div>
+        </div>
+      </section>
+
+      <section className="focus-section" aria-label="Current interests">
+        <div className="section-heading">
+          <FaRegCompass aria-hidden="true" />
+          <span>Current focus</span>
+        </div>
+        <div className="focus-grid">
+          {focusAreas.map((area) => (
+            <div className="focus-card" key={area}>
+              {area}
+            </div>
+          ))}
+        </div>
+      </section>
+    </main>
   );
 }
 

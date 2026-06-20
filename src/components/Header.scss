@@ -1,48 +1,92 @@
-.nav-link {
-  text-align: center;
+.site-navbar {
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(246, 242, 234, 0.08);
+  background: rgba(7, 9, 13, 0.76);
+  backdrop-filter: blur(18px);
 }
 
-.text-decoration-none {
-  width: 100px;
-  &:hover {
-    border-bottom: 1px solid black;
+.nav-container {
+  width: min(1120px, calc(100% - 2rem));
+  padding: 0;
+}
+
+.brand-link {
+  color: #f6f2ea;
+  font-size: 0.86rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-decoration: none;
+
+  &:hover,
+  &:focus-visible {
+    color: #ffffff;
   }
 }
 
-.navbar-nav {
-  @media (max-width: 991px) {
-    padding-top: 5rem;
+.nav-actions {
+  gap: 0.45rem;
+  align-items: center;
+
+  .nav-link {
+    display: inline-flex;
+    min-height: 2.5rem;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.55rem 0.75rem;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    color: #d6ded9;
+    font-size: 0.92rem;
+    font-weight: 700;
+    line-height: 1;
+
+    &:hover,
+    &:focus-visible {
+      color: #ffffff;
+      border-color: rgba(246, 242, 234, 0.14);
+      background: rgba(255, 255, 255, 0.055);
+    }
   }
 }
 
-.navbar {
-  border: none;
-  box-shadow: none;
+.availability {
+  cursor: default;
+  color: #9ba8a2 !important;
+
+  &:hover,
+  &:focus-visible {
+    border-color: transparent !important;
+    background: transparent !important;
+  }
+}
+
+.availability-dot {
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 999px;
+  background: #45d39a;
 }
 
 .navbar-toggler {
-  border: none;
-  outline: none;
+  border: 1px solid rgba(246, 242, 234, 0.16);
+  border-radius: 8px;
+  color: #f6f2ea;
+  padding: 0.6rem 0.7rem;
 }
 
 .navbar-toggler:focus {
-  box-shadow: none;
-}
-
-.navbar-toggler-icon {
-  background-color: transparent;
+  box-shadow: 0 0 0 0.16rem rgba(69, 211, 154, 0.22);
 }
 
 @media (max-width: 991px) {
   .navbar-collapse {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #f8f9fa;
+    inset: 0;
+    height: 100vh;
+    padding: 6rem 1.25rem 1.25rem;
+    background: rgba(7, 9, 13, 0.98);
     transform: translate(100%, -100%);
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.28s ease-in-out;
   }
 
   .navbar-collapse.show {
@@ -51,5 +95,14 @@
 
   .navbar-toggler {
     z-index: 1000;
+  }
+
+  .nav-actions {
+    align-items: stretch;
+
+    .nav-link {
+      justify-content: center;
+      min-height: 3.25rem;
+    }
   }
 }

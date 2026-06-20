@@ -1,11 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Navigate, createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App.tsx";
-import About from "./pages/About/About.tsx";
 import ErrorPage from "./pages/ErrorPage.tsx";
 import HomePage from "./pages/HomePage/HomePage.tsx";
-import ContactPage from "./pages/Contact/Contact.tsx";
 
 const router = createBrowserRouter([
   {
@@ -19,15 +17,15 @@ const router = createBrowserRouter([
       },
       {
         path: "/about",
-        element: <About />,
+        element: <Navigate to="/" replace />,
       },
-      // {
-      //   path: "/blog",
-      //   element: <Blog />,
-      // },
+      {
+        path: "/blog",
+        element: <Navigate to="/" replace />,
+      },
       {
         path: "/contact",
-        element: <ContactPage />,
+        element: <Navigate to="/" replace />,
       },
     ],
   },
