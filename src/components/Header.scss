@@ -3,6 +3,7 @@
   border-bottom: 1px solid rgba(246, 242, 234, 0.08);
   background: rgba(7, 9, 13, 0.76);
   backdrop-filter: blur(18px);
+  overflow-x: clip;
 }
 
 .nav-container {
@@ -15,6 +16,7 @@
   font-size: 0.86rem;
   font-weight: 800;
   letter-spacing: 0.16em;
+  white-space: nowrap;
   text-decoration: none;
 
   &:hover,
@@ -81,16 +83,20 @@
 @media (max-width: 991px) {
   .navbar-collapse {
     position: fixed;
-    inset: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     height: 100vh;
+    width: 100%;
     padding: 6rem 1.25rem 1.25rem;
     background: rgba(7, 9, 13, 0.98);
-    transform: translate(100%, -100%);
+    transform: translateX(100%);
     transition: transform 0.28s ease-in-out;
   }
 
   .navbar-collapse.show {
-    transform: translate(0, 0);
+    transform: translateX(0);
   }
 
   .navbar-toggler {
@@ -104,5 +110,12 @@
       justify-content: center;
       min-height: 3.25rem;
     }
+  }
+}
+
+@media (max-width: 360px) {
+  .brand-link {
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
   }
 }

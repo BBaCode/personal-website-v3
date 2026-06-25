@@ -4,10 +4,12 @@
 
 html {
   background: #07090d;
+  overflow-x: hidden;
 }
 
 body {
   min-width: 320px;
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
   color: #f6f2ea;

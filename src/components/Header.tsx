@@ -60,10 +60,6 @@ function Header() {
                 <FaLinkedinIn aria-hidden="true" />
                 <span>LinkedIn</span>
               </Nav.Link>
-              <Nav.Link as="span" className="availability">
-                <span className="availability-dot" aria-hidden="true" />
-                Building
-              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
